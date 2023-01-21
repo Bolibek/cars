@@ -1,20 +1,17 @@
-function accordion() {
-    
-  // ACCORDION  
-  
-  const accordion = document.querySelectorAll('.accordion')
+import { elemWrapper } from "../utilities/elementWrapper";
 
-  accordion.forEach(acc => {
-    acc.addEventListener('click', () => {
-      acc.classList.toggle('active')
-      const panel = acc.nextElementSibling
-      if(panel.style.maxHeight) {
-        panel.style.maxHeight = null
-      }else{
-        panel.style.maxHeight = panel.scrollHeight + 'px'
-      }
-    })
-  })
+function accordion() {
+	const accordions = document.querySelectorAll(".accordion");
+	accordions.forEach((accord) => {
+		accord.addEventListener("click", () => {
+			accord.classList.toggle("active");
+			const panel = accord.nextElementSibling;
+			panel.style.maxHeight
+				? (panel.style.maxHeight = null)
+				: (panel.style.maxHeight = panel.scrollHeight + "px");
+		});
+	});
 }
 
 export default accordion;
+// module.exports = accordion;

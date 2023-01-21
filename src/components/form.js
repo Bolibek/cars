@@ -1,4 +1,4 @@
-import {closeModal, openModal} from './modal';
+import {closeModal, openModal} from './modal.js';
 
 function form(modalTimer) {
   const forms = document.querySelectorAll("form");
